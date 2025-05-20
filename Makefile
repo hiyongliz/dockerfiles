@@ -1,6 +1,7 @@
 PLATFORM ?= linux/amd64
 
-.PHONY: openjdk-17.0.11-ubuntu openjdk-17.0.11-ubuntu-fonts
+.PHONY: openjdk-17.0.11-ubuntu openjdk-17.0.11-ubuntu-fonts python-3.12.10-slim-fonts
+
 openjdk-17.0.11-ubuntu:
 	chmod +x ./scripts/openjdk-17.0.11-ubuntu.sh
 	./scripts/openjdk-17.0.11-ubuntu.sh
