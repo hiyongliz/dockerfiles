@@ -1,4 +1,4 @@
-FROM registry.cn-shenzhen.aliyuncs.com/lazylibrary/alpine:3.14
+FROM alpine:3.14
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && \
     apk update && \

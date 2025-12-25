@@ -1,6 +1,6 @@
 PLATFORM ?= linux/amd64
 
-.PHONY: openjdk-17.0.11-ubuntu openjdk-17.0.11-ubuntu-fonts python-3.12.10-slim-fonts
+.PHONY: openjdk-17.0.11-ubuntu openjdk-17.0.11-ubuntu-fonts python-3.12.10-slim-fonts mongodbdump
 
 openjdk-17.0.11-ubuntu:
 	chmod +x ./scripts/openjdk-17.0.11-ubuntu.sh
@@ -11,3 +11,6 @@ openjdk-17.0.11-ubuntu-fonts:
 
 python-3.12.10-slim-fonts:
 	docker build --platform $(PLATFORM) -t python:3.12.10-slim-fonts -f python/3.12.10-slim/fonts.Dockerfile .
+
+mongodbdump:
+	docker build --platform $(PLATFORM) -t alpine:mongodbdump -f alpine-mongodump/Dockerfile .
